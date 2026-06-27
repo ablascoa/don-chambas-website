@@ -17,13 +17,13 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://donchambas.com.mx"),
-  title: "Don Chambas — Reclutamiento WhatsApp-first para restaurantes",
+  title: "Don Chambas — Reclutamiento para negocios de servicio en México",
   description:
-    "Don Chambas conecta negocios de servicio con candidatos verificados en México, usando WhatsApp como canal principal. Piloto disponible en CDMX.",
+    "Don Chambas resuelve la fricción de comunicación en el reclutamiento para negocios de servicio en México.",
   openGraph: {
     title: "Don Chambas",
     description:
-      "Reclutamiento WhatsApp-first para negocios de servicio en México.",
+      "Resolvemos la fricción de comunicación en el reclutamiento para negocios de servicio en México.",
     locale: "es_MX",
     type: "website",
     siteName: "Don Chambas",

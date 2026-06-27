@@ -27,10 +27,9 @@ export default function TerminosPage() {
 
           <h2>1. Descripción del servicio</h2>
           <p>
-            Don Chambas es una plataforma digital de reclutamiento WhatsApp-first
-            que conecta a negocios de servicio (principalmente restaurantes) con
-            candidatos para posiciones operativas en México, comenzando en Ciudad
-            de México.
+            Don Chambas es una plataforma digital de reclutamiento que conecta a
+            negocios de servicio (principalmente restaurantes) con candidatos
+            para posiciones operativas en México, comenzando en Ciudad de México.
           </p>
           <p>
             El servicio incluye: registro de candidatos vía WhatsApp, generación
