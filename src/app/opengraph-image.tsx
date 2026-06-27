@@ -35,22 +35,33 @@ export default function OpengraphImage() {
           <span style={{ color: "#F49F08" }}>CHAMBAS</span>
         </div>
 
-        {/* Headline */}
-        <div
-          style={{
-            display: "flex",
-            flexWrap: "wrap",
-            color: "#FFFFFF",
-            fontSize: "60px",
-            fontWeight: 700,
-            lineHeight: 1.08,
-            letterSpacing: "-2px",
-            maxWidth: "1040px",
-          }}
-        >
-          <span>Resolvemos la&nbsp;</span>
-          <span style={{ color: "#F49F08" }}>fricción&nbsp;</span>
-          <span>en el reclutamiento para negocios de servicio.</span>
+        {/* Headline + slogan */}
+        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+          <div
+            style={{
+              display: "flex",
+              flexWrap: "wrap",
+              color: "#FFFFFF",
+              fontSize: "60px",
+              fontWeight: 700,
+              lineHeight: 1.08,
+              letterSpacing: "-2px",
+              maxWidth: "1040px",
+            }}
+          >
+            <span>Reclutamiento de personal para el&nbsp;</span>
+            <span style={{ color: "#F49F08" }}>sector restaurantero.</span>
+          </div>
+          <div
+            style={{
+              color: "#F49F08",
+              fontSize: "34px",
+              fontStyle: "italic",
+              fontWeight: 500,
+            }}
+          >
+            ¿Buscas jale o quien jale?
+          </div>
         </div>
 
         {/* Footer line */}
@@ -62,7 +73,7 @@ export default function OpengraphImage() {
             fontSize: "24px",
           }}
         >
-          <span>Negocios de servicio</span>
+          <span>Sector restaurantero</span>
           <span>·</span>
           <span>México</span>
         </div>

@@ -4,9 +4,9 @@ import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Don Chambas — Reclutamiento para negocios de servicio en México",
+  title: "Don Chambas — Reclutamiento de personal para el sector restaurantero",
   description:
-    "Don Chambas es la plataforma donde la comunicación entre negocios y candidatos fluye. Reclutamiento para negocios de servicio en México.",
+    "Reclutamiento de personal para el sector restaurantero. Don Chambas es la plataforma donde la comunicación entre negocios y candidatos fluye.",
 };
 
 export default function LandingPage() {
@@ -17,9 +17,12 @@ export default function LandingPage() {
       <div className="hero center">
         <div className="wrap">
           <h1>
-            Resolvemos la <span className="accent">fricción</span> en el
-            reclutamiento para negocios de servicio.
+            Reclutamiento de personal para el{" "}
+            <span className="accent">sector restaurantero</span>.
           </h1>
+          <p>
+            <span className="dc-tagline">¿Buscas jale o quien jale?</span>
+          </p>
           <p className="hero-sub">
             Don Chambas es la plataforma donde la comunicación entre negocios y
             candidatos fluye.
