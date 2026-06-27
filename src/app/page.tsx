@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 export const metadata: Metadata = {
   title: "Don Chambas — Reclutamiento para negocios de servicio en México",
   description:
-    "Don Chambas hace que la comunicación entre negocios y candidatos fluya sin fricciones, en el reclutamiento para negocios de servicio en México.",
+    "Don Chambas es la plataforma donde la comunicación entre negocios y candidatos fluye. Reclutamiento para negocios de servicio en México.",
 };
 
 export default function LandingPage() {
@@ -21,8 +21,8 @@ export default function LandingPage() {
             reclutamiento para negocios de servicio.
           </h1>
           <p className="hero-sub">
-            Don Chambas hace que la comunicación entre negocios y candidatos
-            fluya sin fricciones.
+            Don Chambas es la plataforma donde la comunicación entre negocios y
+            candidatos fluye.
           </p>
           <div className="hero-ctas">
             <Link href="/contacto" className="btn btn-primary">

@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://donchambas.com.mx"),
   title: "Don Chambas — Reclutamiento para negocios de servicio en México",
   description:
-    "Don Chambas hace que la comunicación entre negocios y candidatos fluya sin fricciones, en el reclutamiento para negocios de servicio en México.",
+    "Don Chambas es la plataforma donde la comunicación entre negocios y candidatos fluye. Reclutamiento para negocios de servicio en México.",
   openGraph: {
     title: "Don Chambas",
     description:
-      "Resolvemos la fricción en el reclutamiento para negocios de servicio en México.",
+      "Don Chambas es la plataforma donde la comunicación entre negocios y candidatos fluye.",
     locale: "es_MX",
     type: "website",
     siteName: "Don Chambas",
