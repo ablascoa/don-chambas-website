@@ -92,11 +92,11 @@ export default function OpengraphImage() {
             fontSize: "24px",
           }}
         >
-          <span>Candidatos verificados</span>
+          <span>Negocios de servicio</span>
           <span>·</span>
-          <span>Comunicación automatizada</span>
+          <span>Ciudad de México</span>
           <span>·</span>
-          <span>Piloto CDMX 2026</span>
+          <span>2026</span>
         </div>
       </div>
     ),

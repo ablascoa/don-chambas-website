@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
-import { CONTACT_EMAIL, mailto, whatsapp } from "@/lib/config";
+import { CONTACT_EMAIL, mailto } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Contacto — Don Chambas",
-  description:
-    "Contáctanos para unirte al piloto de Don Chambas, información para inversionistas o cualquier duda sobre la plataforma.",
+  description: "Ponte en contacto con el equipo de Don Chambas.",
 };
-
-const PILOT_MSG =
-  "Hola, me interesa el programa piloto de Don Chambas. Mi restaurante está en CDMX.";
 
 export default function ContactoPage() {
   return (
@@ -33,8 +29,7 @@ export default function ContactoPage() {
               Hablemos.
             </h1>
             <p style={{ fontSize: "var(--fs-xl)", color: "rgba(255,255,255,0.78)", maxWidth: "600px", margin: 0 }}>
-              Estamos en etapa de piloto. Respondemos personalmente a cada
-              mensaje en menos de 24 horas.
+              Respondemos personalmente a cada mensaje.
             </p>
           </div>
         </div>
@@ -53,8 +48,8 @@ export default function ContactoPage() {
                 Escríbenos directamente
               </h2>
               <p style={{ color: "var(--ink-dim)", marginBottom: "var(--sp-8)" }}>
-                Somos un equipo fundador pequeño — tu mensaje llegará
-                directamente a nosotros, no a un sistema de tickets.
+                Somos un equipo fundador pequeño — tu mensaje llega directamente
+                a nosotros.
               </p>
               <dl className="contact-info">
                 <dt>Email general</dt>
@@ -62,12 +57,7 @@ export default function ContactoPage() {
                   <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
                 </dd>
 
-                <dt>Para restaurantes — piloto</dt>
-                <dd>
-                  <a href={whatsapp(PILOT_MSG)}>Escríbenos por WhatsApp</a>
-                </dd>
-
-                <dt>Para inversionistas</dt>
+                <dt>Inversionistas</dt>
                 <dd>
                   <a href={mailto("Interés en Don Chambas - Inversionista")}>
                     Escríbenos con asunto "Inversionista"
@@ -90,34 +80,18 @@ export default function ContactoPage() {
             </div>
 
             <div>
-              <div className="card" style={{ marginBottom: "var(--sp-5)" }}>
-                <h3>¿Tienes un restaurante en CDMX?</h3>
+              <div className="card">
+                <h3>¿Quieres saber más?</h3>
                 <p>
-                  Buscamos 10 negocios para nuestro programa piloto. Uso
-                  gratuito, soporte directo del equipo fundador y tarifa
-                  preferencial post-piloto.
+                  Escríbenos y con gusto te compartimos la información relevante
+                  en una llamada.
                 </p>
                 <a
-                  href={whatsapp(PILOT_MSG)}
+                  href={`mailto:${CONTACT_EMAIL}`}
                   className="btn btn-primary"
                   style={{ display: "inline-block", marginTop: "var(--sp-4)" }}
                 >
-                  Únete al piloto por WhatsApp →
-                </a>
-              </div>
-
-              <div className="card">
-                <h3>¿Eres inversionista?</h3>
-                <p>
-                  Escríbenos y agendamos una llamada para compartirte la
-                  información relevante de forma directa.
-                </p>
-                <a
-                  href={mailto("Interés en Don Chambas - Inversionista")}
-                  className="btn btn-blue"
-                  style={{ display: "inline-block", marginTop: "var(--sp-4)" }}
-                >
-                  Agendar llamada →
+                  Enviar correo →
                 </a>
               </div>
             </div>

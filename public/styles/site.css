@@ -9,10 +9,25 @@
   --font-body:    var(--font-body-next, "Inter", -apple-system, sans-serif);
 }
 
-/* Moat cards have white bg even inside dark sections — keep h3 legible */
-section.dark .moat h3 { color: var(--dc-blue); }
-section.dark .moat .body { color: var(--ink-dim); }
-section.dark .moat .body b { color: var(--ink); }
+/* Single-link nav: keep "Contacto" visible on mobile too */
+@media (max-width: 720px) {
+  .nav-links { display: flex !important; }
+}
+
+/* Presentation-slide hero: full viewport, centered */
+.hero.center {
+  min-height: calc(100dvh - 67px); /* viewport minus nav height */
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.hero.center .wrap { width: 100%; }
+.hero.center h1,
+.hero.center .hero-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero.center .hero-ctas { justify-content: center; }
 
 /* ---------- Nav CTAs ---------- */
 .nav-ctas {
