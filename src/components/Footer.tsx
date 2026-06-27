@@ -5,10 +5,8 @@ export default function Footer() {
     <footer>
       <div className="wrap">
         <div>
-          <p>
-            <span className="dc-tagline">
-              ¿Buscas jale o quien jale pa´ tu restaurante?
-            </span>
+          <p style={{ color: "var(--dc-white)", fontWeight: 600 }}>
+            DON CHAMBAS
           </p>
           <p style={{ marginTop: "8px" }}>
             © {new Date().getFullYear()} Don Chambas — Ciudad de México

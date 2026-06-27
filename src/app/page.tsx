@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Don Chambas — Reclutamiento WhatsApp-first en México",
+  title: "Don Chambas — Reclutamiento para negocios de servicio en México",
   description:
-    "Don Chambas es la plataforma de reclutamiento WhatsApp-first para negocios de servicio en México.",
+    "Don Chambas resuelve la fricción de comunicación en el reclutamiento para negocios de servicio en México.",
 };
 
 export default function LandingPage() {
@@ -17,26 +16,14 @@ export default function LandingPage() {
 
       <div className="hero center">
         <div className="wrap">
-          <Image
-            src="/images/logo-don.svg"
-            alt="Don Chambas"
-            width={88}
-            height={88}
-            priority
-            style={{ margin: "0 auto var(--sp-6)" }}
-          />
-          <span className="eyebrow">Ciudad de México · 2026</span>
           <h1>
-            Reclutamiento <span className="accent">WhatsApp-first</span> para
-            negocios de servicio en México.
+            Resolvemos la <span className="accent">fricción de comunicación</span>{" "}
+            en el reclutamiento para negocios de servicio.
           </h1>
           <p className="hero-sub">
-            Conectamos a los negocios de servicio con los candidatos correctos.
-          </p>
-          <p>
-            <span className="dc-tagline">
-              ¿Buscas jale o quien jale pa´ tu restaurante?
-            </span>
+            Contratar se traba en mensajes sin responder, confirmaciones que no
+            llegan y citas que se caen. Don Chambas hace que la comunicación
+            entre negocios y candidatos por fin fluya.
           </p>
           <div className="hero-ctas">
             <Link href="/contacto" className="btn btn-primary">

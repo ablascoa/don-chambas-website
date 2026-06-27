@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Don Chambas — Reclutamiento WhatsApp-first para negocios de servicio en México";
+  "Don Chambas — Reclutamiento para negocios de servicio en México";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -21,66 +21,36 @@ export default function OpengraphImage() {
           fontFamily: "sans-serif",
         }}
       >
-        {/* Logo mark */}
-        <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
-          <div
-            style={{
-              width: "72px",
-              height: "72px",
-              borderRadius: "12px",
-              background: "#04193d",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              color: "#F49F08",
-              fontSize: "30px",
-              fontWeight: 700,
-            }}
-          >
-            DON
-          </div>
-          <div
-            style={{
-              display: "flex",
-              gap: "10px",
-              color: "#FFFFFF",
-              fontSize: "34px",
-              fontWeight: 700,
-            }}
-          >
-            <span>DON</span>
-            <span style={{ color: "#F49F08" }}>CHAMBAS</span>
-          </div>
+        {/* Wordmark */}
+        <div
+          style={{
+            display: "flex",
+            gap: "12px",
+            color: "#FFFFFF",
+            fontSize: "36px",
+            fontWeight: 700,
+          }}
+        >
+          <span>DON</span>
+          <span style={{ color: "#F49F08" }}>CHAMBAS</span>
         </div>
 
         {/* Headline */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              color: "#FFFFFF",
-              fontSize: "68px",
-              fontWeight: 700,
-              lineHeight: 1.05,
-              letterSpacing: "-2px",
-              maxWidth: "1000px",
-            }}
-          >
-            <span>Reclutamiento&nbsp;</span>
-            <span style={{ color: "#F49F08" }}>WhatsApp-first&nbsp;</span>
-            <span>para negocios de servicio en México.</span>
-          </div>
-          <div
-            style={{
-              color: "#F49F08",
-              fontSize: "30px",
-              fontStyle: "italic",
-              fontWeight: 500,
-            }}
-          >
-            ¿Buscas jale o quien jale pa´ tu restaurante?
-          </div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            color: "#FFFFFF",
+            fontSize: "60px",
+            fontWeight: 700,
+            lineHeight: 1.08,
+            letterSpacing: "-2px",
+            maxWidth: "1040px",
+          }}
+        >
+          <span>Resolvemos la&nbsp;</span>
+          <span style={{ color: "#F49F08" }}>fricción de comunicación&nbsp;</span>
+          <span>en el reclutamiento para negocios de servicio.</span>
         </div>
 
         {/* Footer line */}
@@ -94,9 +64,7 @@ export default function OpengraphImage() {
         >
           <span>Negocios de servicio</span>
           <span>·</span>
-          <span>Ciudad de México</span>
-          <span>·</span>
-          <span>2026</span>
+          <span>México</span>
         </div>
       </div>
     ),
