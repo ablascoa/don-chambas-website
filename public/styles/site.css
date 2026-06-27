@@ -1,0 +1,327 @@
+/* ==========================================================================
+   Don Chambas Website — site-level overrides
+   Loaded after tokens.css and base.css.
+   ========================================================================== */
+
+/* Next.js injects fonts as CSS variables; wire them into the token names */
+:root {
+  --font-display: var(--font-display-next, "Space Grotesk", -apple-system, sans-serif);
+  --font-body:    var(--font-body-next, "Inter", -apple-system, sans-serif);
+}
+
+/* Moat cards have white bg even inside dark sections — keep h3 legible */
+section.dark .moat h3 { color: var(--dc-blue); }
+section.dark .moat .body { color: var(--ink-dim); }
+section.dark .moat .body b { color: var(--ink); }
+
+/* ---------- Nav CTAs ---------- */
+.nav-ctas {
+  display: flex;
+  gap: var(--sp-3);
+  align-items: center;
+  flex-shrink: 0;
+}
+.btn {
+  display: inline-block;
+  padding: 8px var(--sp-5);
+  border-radius: 999px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border-bottom: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.btn-primary {
+  background: var(--dc-orange);
+  color: var(--dc-blue-900);
+}
+.btn-primary:hover {
+  background: var(--dc-orange-600);
+  color: var(--dc-blue-900);
+}
+.btn-outline {
+  border: 1.5px solid rgba(255,255,255,0.5);
+  color: var(--dc-white);
+  background: transparent;
+}
+.btn-outline:hover {
+  border-color: var(--dc-white);
+  color: var(--dc-white);
+}
+.btn-blue {
+  background: var(--dc-blue);
+  color: var(--dc-white);
+}
+.btn-blue:hover {
+  background: var(--dc-blue-700);
+  color: var(--dc-white);
+}
+
+/* ---------- Hero CTAs ---------- */
+.hero-ctas {
+  display: flex;
+  gap: var(--sp-4);
+  flex-wrap: wrap;
+  margin-top: var(--sp-8);
+}
+.hero-ctas .btn {
+  font-size: var(--fs-base);
+  padding: var(--sp-4) var(--sp-8);
+}
+
+/* ---------- Pilot criteria chips ---------- */
+.criteria-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-3);
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-6) 0;
+}
+.criteria-list li {
+  background: rgba(244,159,8,0.12);
+  border: 1px solid rgba(244,159,8,0.35);
+  color: var(--dc-blue-900);
+  border-radius: 999px;
+  padding: 6px var(--sp-4);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+/* ---------- Feature grid (restaurantes page) ---------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: var(--sp-5);
+  margin-top: var(--sp-6);
+}
+@media (max-width: 860px) {
+  .feature-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 560px) {
+  .feature-grid { grid-template-columns: 1fr; }
+}
+.feature-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  box-shadow: var(--shadow-sm);
+}
+.feature-card .icon {
+  font-size: 28px;
+  margin-bottom: var(--sp-3);
+}
+.feature-card h3 {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  margin-bottom: var(--sp-2);
+  color: var(--dc-blue);
+}
+.feature-card p {
+  font-size: var(--fs-sm);
+  color: var(--ink-dim);
+  margin: 0;
+}
+
+/* ---------- FAQ ---------- */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: var(--sp-5) var(--sp-6);
+}
+.faq-item h4 {
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--dc-blue);
+  margin: 0 0 var(--sp-2);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.faq-item p {
+  color: var(--ink-dim);
+  font-size: var(--fs-base);
+  margin: 0;
+}
+
+/* ---------- Stat highlight ---------- */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: var(--sp-5);
+  margin: var(--sp-8) 0;
+}
+@media (max-width: 720px) {
+  .stat-row { grid-template-columns: 1fr; }
+}
+.stat-block {
+  text-align: center;
+  padding: var(--sp-6);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+.stat-block .num {
+  font-family: var(--font-display);
+  font-size: var(--fs-4xl);
+  font-weight: 700;
+  color: var(--dc-blue);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.stat-block .label {
+  color: var(--ink-dim);
+  font-size: var(--fs-sm);
+  margin-top: var(--sp-2);
+}
+
+/* ---------- Legal pages ---------- */
+.legal-body {
+  max-width: var(--max-w-tight);
+  margin: 0 auto;
+  padding: var(--sp-16) var(--sp-6);
+}
+.legal-body h1 {
+  font-family: var(--font-display);
+  font-size: var(--fs-3xl);
+  color: var(--dc-blue);
+  margin-bottom: var(--sp-3);
+}
+.legal-body .last-updated {
+  color: var(--ink-dim);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-10);
+}
+.legal-body .banner {
+  background: rgba(244,159,8,0.12);
+  border: 1px solid rgba(244,159,8,0.4);
+  border-radius: var(--r-md);
+  padding: var(--sp-4) var(--sp-5);
+  font-size: var(--fs-sm);
+  color: var(--dc-blue-900);
+  margin-bottom: var(--sp-10);
+}
+.legal-body h2 {
+  font-size: var(--fs-xl);
+  margin-top: var(--sp-10);
+  margin-bottom: var(--sp-3);
+  color: var(--dc-blue);
+}
+.legal-body h3 {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  margin-top: var(--sp-6);
+  margin-bottom: var(--sp-2);
+}
+.legal-body p, .legal-body li {
+  color: var(--ink-dim);
+  line-height: var(--lh-loose);
+  margin-bottom: var(--sp-4);
+}
+.legal-body ul {
+  padding-left: var(--sp-6);
+}
+
+/* ---------- Contact page ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-10);
+  margin-top: var(--sp-10);
+}
+@media (max-width: 720px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+.contact-info dt {
+  font-weight: 600;
+  color: var(--dc-blue);
+  margin-top: var(--sp-5);
+}
+.contact-info dd {
+  color: var(--ink-dim);
+  margin: 0;
+}
+
+/* ---------- Investor-specific ---------- */
+.biz-model-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-5);
+  margin-top: var(--sp-6);
+}
+@media (max-width: 720px) {
+  .biz-model-grid { grid-template-columns: 1fr; }
+}
+.biz-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+}
+.biz-card h3 {
+  font-size: var(--fs-base);
+  margin-bottom: var(--sp-3);
+  color: var(--dc-blue);
+}
+.biz-card ul {
+  padding-left: var(--sp-5);
+  margin: 0;
+}
+.biz-card li {
+  color: var(--ink-dim);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--sp-2);
+}
+
+.fintech-ladder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  margin-top: var(--sp-6);
+}
+.ladder-step {
+  display: flex;
+  gap: var(--sp-5);
+  align-items: flex-start;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--sp-5) var(--sp-6);
+}
+.ladder-step .step-badge {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--dc-blue);
+  color: var(--dc-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+}
+.ladder-step h3 {
+  font-size: var(--fs-base);
+  margin-bottom: var(--sp-1);
+  color: var(--dc-blue);
+}
+.ladder-step p {
+  color: var(--ink-dim);
+  font-size: var(--fs-sm);
+  margin: 0;
+}
+
+@media (max-width: 720px) {
+  .nav-ctas { display: none; }
+}
