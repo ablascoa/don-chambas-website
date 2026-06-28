@@ -27,14 +27,11 @@ export default function LandingPage() {
 
           <h1>
             Reclutamiento de personal para el{" "}
-            <span className="highlight">sector restaurantero</span>
+            <span className="accent">sector restaurantero</span>.
           </h1>
-          <p className="hero-sub">
-            La plataforma donde la comunicación entre negocios y candidatos fluye.
-          </p>
           <div className="hero-ctas">
             <Link href="/contacto" className="btn btn-primary">
-              Contáctanos
+              Hablemos
             </Link>
           </div>
 

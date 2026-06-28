@@ -36,11 +36,16 @@ export default function PilotoPage() {
               <li>Dificultad para retener al talento</li>
               <li>Candidatos que no llegan a la entrevista o al primer día</li>
             </ul>
-            <p className="lead" style={{ marginBottom: 0 }}>
+            <p className="lead">
               Queremos hablar contigo para idear juntos soluciones efectivas. En
               Don Chambas nos entusiasman las posibilidades que abren la
               automatización y la inteligencia artificial para resolver estos
               retos.
+            </p>
+            <p className="quote" style={{ marginBottom: 0 }}>
+              Si estás en la industria restaurantera y tienes ideas de cómo se
+              podría automatizar o integrar con IA algún proceso, nos gustaría
+              hablar contigo.
             </p>
           </div>
         </section>
