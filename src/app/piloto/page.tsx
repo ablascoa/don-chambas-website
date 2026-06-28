@@ -1,7 +1,26 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 import { PARTNERSHIPS_EMAIL, mailto } from "@/lib/config";
+
+const FRICTIONS = [
+  {
+    icon: "search",
+    title: "Encontrar candidatos",
+    desc: "Dificultad para dar con el perfil adecuado.",
+  },
+  {
+    icon: "heart",
+    title: "Retener al talento",
+    desc: "El equipo rota más de lo que quisieras.",
+  },
+  {
+    icon: "calendar-x",
+    title: "Ausencias y no-shows",
+    desc: "Candidatos que no llegan a la entrevista o al primer día.",
+  },
+] as const;
 
 export const metadata: Metadata = {
   title: "Participa en el programa piloto — Don Chambas",
@@ -31,11 +50,17 @@ export default function PilotoPage() {
               escucharte. Buscamos negocios que vivan fricciones en sus
               contrataciones:
             </p>
-            <ul className="friction" style={{ margin: "var(--sp-6) 0" }}>
-              <li>Dificultad para encontrar candidatos adecuados</li>
-              <li>Dificultad para retener al talento</li>
-              <li>Candidatos que no llegan a la entrevista o al primer día</li>
-            </ul>
+            <div className="icon-grid">
+              {FRICTIONS.map((f) => (
+                <div className="icon-card pain" key={f.title}>
+                  <div className="ic">
+                    <Icon name={f.icon} size={24} />
+                  </div>
+                  <h3>{f.title}</h3>
+                  <p>{f.desc}</p>
+                </div>
+              ))}
+            </div>
             <p className="lead">
               Queremos hablar contigo para idear juntos soluciones efectivas. En
               Don Chambas nos entusiasman las posibilidades que abren la

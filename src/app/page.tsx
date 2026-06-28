@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import BrushWordmark from "@/components/BrushWordmark";
@@ -29,11 +28,6 @@ export default function LandingPage() {
             Reclutamiento de personal para el{" "}
             <span className="accent">sector restaurantero</span>
           </h1>
-          <div className="hero-ctas">
-            <Link href="/contacto" className="btn btn-primary">
-              Hablemos
-            </Link>
-          </div>
 
           <CharacterStrip size="lg" className="hero-characters" />
         </div>

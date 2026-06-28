@@ -1,7 +1,16 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import Icon from "@/components/Icon";
 import { CAREERS_EMAIL, mailto } from "@/lib/config";
+
+const AREAS = [
+  { icon: "trending-up", name: "Marketing" },
+  { icon: "code", name: "Tecnología" },
+  { icon: "layers", name: "Diseño de producto" },
+  { icon: "sliders", name: "Operaciones" },
+  { icon: "bar-chart", name: "Finanzas" },
+] as const;
 
 export const metadata: Metadata = {
   title: "Ayúdanos a construir Don Chambas — Carreras",
@@ -32,11 +41,16 @@ export default function CarrerasPage() {
               especial, hablemos.
             </p>
             <h4>Áreas en las que buscamos talento</h4>
-            <ul className="criteria-list">
-              <li>Marketing</li>
-              <li>Tecnología</li>
-              <li>Diseño de producto</li>
-            </ul>
+            <div className="icon-grid">
+              {AREAS.map((a) => (
+                <div className="icon-card" key={a.name}>
+                  <div className="ic">
+                    <Icon name={a.icon} size={24} />
+                  </div>
+                  <h3>{a.name}</h3>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

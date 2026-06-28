@@ -191,6 +191,78 @@
   font-weight: 500;
 }
 
+/* ---------- Icon cards (áreas, fricciones) ---------- */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--sp-5);
+  margin-top: var(--sp-6);
+}
+.icon-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: var(--sp-6);
+  box-shadow: var(--shadow-sm);
+}
+.icon-card .ic {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 159, 8, 0.14);
+  color: var(--dc-orange);
+  margin-bottom: var(--sp-4);
+}
+.icon-card.pain .ic {
+  background: rgba(178, 54, 54, 0.12);
+  color: var(--dc-red);
+}
+.icon-card h3 {
+  font-size: var(--fs-base);
+  margin: 0 0 var(--sp-1);
+  color: var(--dc-blue);
+}
+.icon-card p {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: var(--fs-sm);
+}
+
+/* ---------- Contact methods (con íconos) ---------- */
+.contact-methods {
+  list-style: none;
+  padding: 0;
+  margin: var(--sp-8) 0 0;
+  display: grid;
+  gap: var(--sp-4);
+}
+.contact-methods li {
+  display: flex;
+  gap: var(--sp-4);
+  align-items: flex-start;
+}
+.contact-methods .ic {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--r-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 159, 8, 0.14);
+  color: var(--dc-orange);
+}
+.contact-methods b {
+  display: block;
+  color: var(--dc-blue);
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.contact-methods .method-body { color: var(--ink-dim); font-size: var(--fs-base); }
+
 /* ---------- Feature grid (restaurantes page) ---------- */
 .feature-grid {
   display: grid;
