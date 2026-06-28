@@ -195,8 +195,8 @@
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: var(--sp-5);
-  margin-top: var(--sp-6);
+  gap: var(--sp-4);
+  margin: var(--sp-5) 0;
 }
 .icon-card {
   background: var(--surface);
