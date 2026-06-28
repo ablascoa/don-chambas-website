@@ -9,6 +9,10 @@
  */
 
 export const CONTACT_EMAIL = "hola@donchambas.com.mx";
+// Participación en el programa piloto (negocios restauranteros)
+export const PARTNERSHIPS_EMAIL = "partnerships@donchambas.com.mx";
+// Trabaja con nosotros (talento)
+export const CAREERS_EMAIL = "careers@donchambas.com.mx";
 
 // PLACEHOLDER — número de WhatsApp Business (formato internacional, sin +).
 export const WHATSAPP_NUMBER = "525500000000";
@@ -16,10 +20,14 @@ export const WHATSAPP_NUMBER = "525500000000";
 export const SITE_URL = "https://donchambas.com.mx";
 
 /** Construye un enlace mailto con asunto y cuerpo opcional. */
-export function mailto(subject: string, body?: string): string {
+export function mailto(
+  subject: string,
+  body?: string,
+  to: string = CONTACT_EMAIL,
+): string {
   const params = new URLSearchParams({ subject });
   if (body) params.set("body", body);
-  return `mailto:${CONTACT_EMAIL}?${params.toString()}`;
+  return `mailto:${to}?${params.toString()}`;
 }
 
 /** Construye un enlace click-to-chat de WhatsApp con mensaje pre-llenado. */

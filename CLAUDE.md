@@ -21,7 +21,9 @@ El sitio se redujo a propósito a una **pantalla de presentación** + legales, p
 
 **Páginas actuales:**
 - `/` — slide de presentación: lockup brush oficial (wordmark + tagline + sparkles), headline "Reclutamiento de personal para el **sector restaurantero**" (palabra con caja degradado), subtítulo "La plataforma donde la comunicación entre negocios y candidatos fluye", CTA "Contáctanos", tira de personajes. Watermark "DON" + sparkles animados en el fondo.
-- `/contacto` — email + derechos ARCO + ubicación. Sin piloto, sin WhatsApp CTA.
+- `/piloto` — programa piloto para negocios restauranteros (fricciones de contratación). CTA → `partnerships@donchambas.com.mx`.
+- `/carreras` — "Ayúdanos a construir Don Chambas": reclutamiento de talento (marketing, tech, diseño de producto). CTA → `careers@donchambas.com.mx`.
+- `/contacto` — email + derechos ARCO + ubicación. Sin WhatsApp CTA.
 - `/privacidad` — aviso LFPDPPP (borrador, pendiente revisión legal). Ancla `#eliminar-datos` para Meta.
 - `/terminos` — términos (borrador).
 - `opengraph-image`, `icon.svg`, `sitemap.ts`, `robots.ts`.
@@ -40,7 +42,7 @@ El sitio cubre los campos de la app: Privacy Policy URL → `/privacidad`, Terms
 
 ### Pendientes
 - [ ] Conectar dominio `donchambas.com.mx` en Vercel (Settings → Domains)
-- [ ] Email de contacto real: el sitio usa `hola@donchambas.com.mx` (placeholder en `src/lib/config.ts`); Meta usa `a.blascoalmeida@gmail.com`. Alinear / crear buzón.
+- [ ] Buzones reales: el sitio usa `hola@donchambas.com.mx` (general), `partnerships@donchambas.com.mx` (piloto) y `careers@donchambas.com.mx` (talento) — definidos en `src/lib/config.ts`. Confirmar que existen y se monitorean. Meta usa `a.blascoalmeida@gmail.com`.
 - [ ] Razón social / entidad legal (para legales y verificación de negocio de Meta)
 - [ ] Subir el ícono 1024 a la app de Meta
 - [ ] Cifras de mercado y nombres del equipo: actualmente NO se muestran en el sitio mínimo; viven en el material privado.

@@ -42,7 +42,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <Footer />
+      <Footer showCharacters={false} />
     </>
   );
 }

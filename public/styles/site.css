@@ -10,17 +10,25 @@
   --font-body:    var(--font-body-next, "Nunito", -apple-system, sans-serif);
 }
 
-/* Single-link nav: keep "Contacto" visible on mobile too */
+/* Keep nav links visible on mobile; allow them to wrap below the wordmark */
 @media (max-width: 720px) {
-  .nav-links { display: flex !important; }
+  .nav-inner { flex-wrap: wrap; }
+  .nav-links {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+    justify-content: flex-end;
+  }
 }
 
-/* Presentation-slide hero: full viewport, centered */
+/* Presentation-slide hero: centered, altura natural para que la tira de
+   personajes nunca se corte en el fold */
 .hero.center {
-  min-height: calc(100dvh - 67px); /* viewport minus nav height */
+  min-height: auto;
   display: flex;
   align-items: center;
   text-align: center;
+  padding-bottom: var(--sp-12);
 }
 .hero.center .wrap { width: 100%; }
 .hero.center h1,
@@ -85,10 +93,10 @@
 
 /* Banda inferior del hero, como las piezas de marca */
 .hero-characters {
-  margin-top: var(--sp-12);
+  margin-top: var(--sp-10);
 }
 @media (max-width: 720px) {
-  .hero-characters { margin-top: var(--sp-10); gap: 4px; }
+  .hero-characters { margin-top: var(--sp-8); gap: 4px; }
   /* en móvil mostramos 3 personajes para que no se apriete */
   .hero-characters img:nth-child(4),
   .hero-characters img:nth-child(5) { display: none; }
