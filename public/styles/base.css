@@ -64,13 +64,19 @@ code, pre {
   font-weight: 800;
   font-size: var(--fs-xl);
   letter-spacing: 0;
+  flex-shrink: 0;
 }
 .brand img { width: 36px; height: 36px; }
-/* Wordmark "solo nombre" (amarillo + sombra blanca) en el nav */
+/* Wordmark "solo nombre" (amarillo + sombra blanca) en el nav.
+   max-width: none anula el `img { max-width: 100% }` global, que en un
+   contenedor apretado recortaba el ancho y distorsionaba la proporción.
+   El alto manda; el ancho es automático para conservar el aspect ratio. */
 .brand .brand-logo {
   width: auto;
+  max-width: none;
   height: 48px;
   display: block;
+  flex-shrink: 0;
 }
 @media (max-width: 720px) {
   .brand .brand-logo { height: 42px; }
@@ -99,45 +105,15 @@ code, pre {
 }
 .nav-links a:hover { color: var(--dc-white); }
 
-/* Botón hamburguesa: oculto en desktop, visible en móvil */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  width: 44px;
-  height: 44px;
-  padding: 10px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-.nav-toggle-bar {
-  display: block;
-  height: 3px;
-  width: 100%;
-  border-radius: 2px;
-  background: var(--dc-orange);
-}
-
+/* En móvil los links bajan a una segunda fila completa para no robarle
+   ancho al wordmark (que conserva su proporción gracias a max-width: none). */
 @media (max-width: 720px) {
-  .nav-toggle { display: flex; }
+  .nav-inner { flex-wrap: wrap; }
   .nav-links {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    gap: 0;
-    padding: var(--sp-2) var(--sp-4);
-    background: var(--dc-blue);
-    border-bottom: 4px solid var(--dc-orange);
-  }
-  .nav-links.is-open { display: flex; }
-  .nav-links a {
-    padding: var(--sp-3) 0;
-    font-size: var(--fs-md);
+    width: 100%;
+    flex-wrap: wrap;
+    gap: var(--sp-4);
+    justify-content: flex-start;
   }
 }
 

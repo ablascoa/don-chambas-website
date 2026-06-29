@@ -1,17 +1,6 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
-
-const LINKS = [
-  { href: "/piloto", label: "Programa piloto" },
-  { href: "/carreras", label: "Únete al equipo" },
-  { href: "/contacto", label: "Contacto" },
-];
 
 export default function Nav() {
-  const [open, setOpen] = useState(false);
-
   return (
     <nav className="nav">
       <div className="wrap">
@@ -25,26 +14,10 @@ export default function Nav() {
               draggable={false}
             />
           </Link>
-
-          <button
-            type="button"
-            className="nav-toggle"
-            aria-label="Menú"
-            aria-expanded={open}
-            aria-controls="nav-menu"
-            onClick={() => setOpen((v) => !v)}
-          >
-            <span className="nav-toggle-bar" />
-            <span className="nav-toggle-bar" />
-            <span className="nav-toggle-bar" />
-          </button>
-
-          <div id="nav-menu" className={`nav-links${open ? " is-open" : ""}`}>
-            {LINKS.map((l) => (
-              <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
-                {l.label}
-              </Link>
-            ))}
+          <div className="nav-links">
+            <Link href="/piloto">Programa piloto</Link>
+            <Link href="/carreras">Únete al equipo</Link>
+            <Link href="/contacto">Contacto</Link>
           </div>
         </div>
       </div>

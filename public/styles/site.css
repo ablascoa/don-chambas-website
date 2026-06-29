@@ -10,9 +10,6 @@
   --font-body:    var(--font-body-next, "Nunito", -apple-system, sans-serif);
 }
 
-/* En móvil los links viven dentro del menú hamburguesa (ver base.css) para
-   que el wordmark del nav nunca se comprima ni se distorsione. */
-
 /* Presentation-slide hero: centered, altura natural para que la tira de
    personajes nunca se corte en el fold */
 .hero.center {

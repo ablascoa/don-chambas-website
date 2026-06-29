@@ -19,7 +19,6 @@ export default function ContactoPage() {
           <div className="wrap">
             <span className="eyebrow">Contacto</span>
             <h1>Hablemos</h1>
-            <p className="lead">Respondemos personalmente a cada mensaje.</p>
           </div>
         </header>
 
@@ -28,10 +27,6 @@ export default function ContactoPage() {
             <div className="contact-grid">
               <div>
                 <h2>Escríbenos directamente</h2>
-                <p className="lead" style={{ marginBottom: 0 }}>
-                  Somos un equipo fundador pequeño — tu mensaje llega
-                  directamente a nosotros.
-                </p>
 
                 <ul className="contact-methods">
                   <li>
