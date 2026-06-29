@@ -662,9 +662,11 @@ footer .footer-legal a {
 }
 footer .footer-legal a:hover { color: var(--dc-orange); }
 @media (max-width: 720px) {
-  footer .wrap { justify-content: flex-start; }
-  footer .footer-links { align-items: flex-start; text-align: left; }
-  footer .footer-legal { justify-content: flex-start; }
+  footer .wrap { justify-content: center; text-align: center; }
+  footer .footer-brand { min-width: 0; }
+  footer .footer-wordmark { margin-left: auto; margin-right: auto; }
+  footer .footer-links { align-items: center; text-align: center; width: 100%; }
+  footer .footer-legal { justify-content: center; }
 }
 
 /* ---------- Pieza-nav (cross-link entre piezas) ---------- */
