@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Icon from "@/components/Icon";
+import Watermark from "@/components/Watermark";
 import { CAREERS_EMAIL } from "@/lib/config";
 
 const AREAS = [
@@ -69,7 +70,8 @@ export default function CarrerasPage() {
           </div>
         </section>
 
-        <section className="alt">
+        <section className="alt has-watermark">
+          <Watermark tone="light" />
           <div className="wrap tight">
             <span className="section-tag">Lo que vas a encontrar</span>
             <h2>Un espacio para crecer</h2>

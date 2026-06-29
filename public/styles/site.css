@@ -10,16 +10,8 @@
   --font-body:    var(--font-body-next, "Nunito", -apple-system, sans-serif);
 }
 
-/* Keep nav links visible on mobile; allow them to wrap below the wordmark */
-@media (max-width: 720px) {
-  .nav-inner { flex-wrap: wrap; }
-  .nav-links {
-    display: flex !important;
-    flex-wrap: wrap;
-    gap: var(--sp-4);
-    justify-content: flex-end;
-  }
-}
+/* En móvil los links viven dentro del menú hamburguesa (ver base.css) para
+   que el wordmark del nav nunca se comprima ni se distorsione. */
 
 /* Presentation-slide hero: centered, altura natural para que la tira de
    personajes nunca se corte en el fold */
@@ -229,6 +221,43 @@
   margin: 0;
   color: var(--ink-dim);
   font-size: var(--fs-sm);
+}
+
+/* ---------- Watermark de marca (fondo sutil reutilizable) ---------- */
+.has-watermark {
+  position: relative;
+  overflow: hidden;
+}
+/* el contenido real (wrap) queda por encima del watermark */
+.has-watermark > .wrap {
+  position: relative;
+  z-index: 1;
+}
+.watermark {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  background-repeat: repeat;
+  background-position: center;
+  background-size: 300px auto;
+}
+.watermark--dark {
+  /* tile blanco para fondos navy/oscuros */
+  background-image: url(/images/brand/watermark-tile-blanco.png);
+  opacity: 0.06;
+}
+.watermark--light {
+  /* tile navy para fondos claros */
+  background-image: url(/images/brand/watermark-tile-navy.png);
+  opacity: 0.05;
+}
+@media (max-width: 720px) {
+  .watermark { background-size: 220px auto; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  /* estático a propósito; sin animación para no distraer */
 }
 
 /* ---------- Icon bullets (áreas, fricciones en lista) ---------- */

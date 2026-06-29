@@ -11,6 +11,22 @@ Categorías: `dev`, `content`, `design`, `deploy`, `docs`, `planning`, `admin`.
 
 ## 2026-06-28
 
+- **Watermarks de marca + variante de wordmark sombra-blanca + adenda al manual** (Claude · `design`, `dev`, `docs`)
+  A partir de los recursos nuevos de Alex en el Drive: (1) cambié el nav a la variante
+  **amarillo + sombra blanca** — no existía, la generé recoloreando el wordmark plano y componiendo
+  una sombra dura blanca con PIL (`wordmark-amarillo-blanco.png`). (2) **Watermarks**: componente
+  reutilizable `<Watermark tone="dark|light">` + CSS (`.has-watermark`/`.watermark`, tiles en
+  `public/images/brand/`), aplicado de ejemplo en secciones `.alt` de piloto y carreras; y fondos
+  PNG 1920×1080 para presentaciones (navy + claro, mosaico del wordmark a ~8 %) en
+  `docs/brand-assets/`. (3) **Adenda al manual**: leí `donchambas_manual-de-marca.pdf` (colores
+  primarios, usos incorrectos, el patrón watermark ya en págs. 08–11). Recomendación = adenda
+  digital, no reeditar el PDF. Creada en `docs/brand-addendum.md` y como Google Doc en
+  `Drive/Branding/Manual de marca/`. Detecté que el rojo del manual (#B23636) ≠ rojo web
+  (#d31e1d) — pendiente reconciliar. **Nota:** las imágenes NO se pudieron subir al Drive vía MCP
+  (el contenido va como base64 en la llamada y se corrompe); quedan en `docs/brand-assets/` y en
+  el folder `Digital/Watermarks - fondos (ejemplos)/` (creado, vacío) para que Alex las arrastre.
+  _Next: Alex sube los PNG al Drive; decidir rojo canónico (#B23636 vs #d31e1d)._
+
 - **Wordmark amarillo+rojo como brand del nav** (Claude · `design`, `dev`)
   Alex subió recursos nuevos al Drive (`Branding Don chambas/Digital/Variaciones de logotipo/
   Wordmark - solo nombre (PNG)/`): wordmarks "solo nombre" (sin tagline, con estrellitas, fondo

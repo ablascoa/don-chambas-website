@@ -66,7 +66,7 @@ code, pre {
   letter-spacing: 0;
 }
 .brand img { width: 36px; height: 36px; }
-/* Wordmark "solo nombre" (amarillo + sombra roja) en el nav */
+/* Wordmark "solo nombre" (amarillo + sombra blanca) en el nav */
 .brand .brand-logo {
   width: auto;
   height: 48px;
@@ -98,7 +98,48 @@ code, pre {
   border-bottom: none;
 }
 .nav-links a:hover { color: var(--dc-white); }
-@media (max-width: 720px) { .nav-links { display: none; } }
+
+/* Botón hamburguesa: oculto en desktop, visible en móvil */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav-toggle-bar {
+  display: block;
+  height: 3px;
+  width: 100%;
+  border-radius: 2px;
+  background: var(--dc-orange);
+}
+
+@media (max-width: 720px) {
+  .nav-toggle { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: var(--sp-2) var(--sp-4);
+    background: var(--dc-blue);
+    border-bottom: 4px solid var(--dc-orange);
+  }
+  .nav-links.is-open { display: flex; }
+  .nav-links a {
+    padding: var(--sp-3) 0;
+    font-size: var(--fs-md);
+  }
+}
 
 /* ---------- Hero ---------- */
 .hero {

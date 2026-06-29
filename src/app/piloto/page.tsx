@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Icon from "@/components/Icon";
+import Watermark from "@/components/Watermark";
 import { PARTNERSHIPS_EMAIL, mailto } from "@/lib/config";
 
 const FRICTIONS = [
@@ -43,7 +44,8 @@ export default function PilotoPage() {
           </div>
         </header>
 
-        <section className="alt">
+        <section className="alt has-watermark">
+          <Watermark tone="light" />
           <div className="wrap tight">
             <p className="lead">
               ¿Tienes un negocio en la industria restaurantera? Queremos
